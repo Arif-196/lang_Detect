@@ -1,5 +1,7 @@
+# import library langdetect
 from langdetect import detect
 
+# list of language
 all_language_code ={
     "ar" : "Arab",
     "en" : "English",
@@ -10,13 +12,14 @@ all_language_code ={
     "fr" : "France"
 }
 
+# words by language
 input_sentences =[
     "Arif Fadillah, Decision Support System Semester Final Exam assignment",
     "Arif Fadillah, Tarea del examen final del semestre del sistema de apoyo a la toma de decisiones",
     "Arif Fadillah, Tugas Akhir Semester Sistem Pendukung Keputusan",
-    "Arif Fadillah, devoir d'examen final du semestre du système d'aide à la décision"
-    
+    "Arif Fadillah, devoir d'examen final du semestre du système d'aide à la décision"   
 ]
+
 lemmatizer_names = ['language Code','Input Sentence']
 format_text = "{:24}" * (len(lemmatizer_names)+1)
 print ("\n",format_text.format("Language Name", *lemmatizer_names),'\n','*'*120)
